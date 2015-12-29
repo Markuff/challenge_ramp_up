@@ -1,1 +1,44 @@
-$var: #aaa;
+$header-bg:rgb(27, 64, 128);
+$header-cl:rgb(255, 255, 255);
+body {
+    font-family: monospace;
+    font-size: 125%;
+    margin: 0;
+    padding: 0;
+    section#app {
+        header {
+            background: $header-bg;
+            box-shadow: #000 0px 1px 5px;
+            color: $header-cl;
+            margin: 0px;
+            padding: 1% 0%;
+            text-align: center;
+        }
+    }
+    section#content {
+        margin: 1% 0%;
+        padding: 1% 0%;
+        .each-crime {
+            box-shadow: 1px 1px 5px rgb(170, 170, 170);
+            margin: auto;
+            padding: 1% 5%;
+            width: 70%;
+            .l-side {
+                float: left;
+                width: 45%;
+            }
+            .r-side {
+                float: right;
+                width: 45%;
+            }
+            report {
+                width: 100%;
+            }
+            &:after {
+                clear: both;
+                content: '';
+                display: table;
+            }
+        }
+    }
+}
