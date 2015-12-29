@@ -7,4 +7,4 @@ var CrimesSet = Backbone.Collection.extend ({
     url: 'https://data.police.uk/api/crimes-no-location?category=all-crime&force=warwickshire&date=2013-09'
 });
 
-app.Todos = new SomethingHere ();
+app.Crimes = new CrimesSet ();

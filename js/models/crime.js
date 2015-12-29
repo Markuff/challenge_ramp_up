@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-var app.Crime = Backbone.Model.extend ({
+app.Crime = Backbone.Model.extend ({
     defaults: {
         category: '',
         outcome_status: {
