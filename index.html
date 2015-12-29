@@ -17,18 +17,15 @@
     <script type="text/template" id="crimes">
         <div class="each-crime">
             <div class="l-side report">
-                <h4>Category: other-crime</h4>
-                <h5>ID: 4192019</h5>
-                <p>Date of ocurrence: 2013-09</p>
+                <h4>Category: <%= category %></h4>
+                <h5>ID: <%= id %></h5>
+                <p>Date of ocurrence: <%= month %></p>
             </div>
             <div class="r-side report">
-                <p>Crime is: Under investigation</p>
-                <p>To date: 2013-09</p>
+                <p>Crime is: <%= outcome_status.category %></p>
+                <p>To date: <%= outcome_status.date %></p>
             </div>
         </div>
-    </script>
-    <script type="text/template" id="list-crimes">
-    
     </script>
     <script src="js/lib/jquery-1.11.3.min.js"></script>
     <script src="js/lib/underscore-min.js"></script>
