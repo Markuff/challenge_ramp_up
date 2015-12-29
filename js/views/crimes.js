@@ -3,7 +3,11 @@
 var app = app || {};
 
 app.CrimeView = Backbone.View.extend ({
-    tag: 'section',
-    id: 'content',
-    template: _.template( $('#crimes').html() )
+    tagName: 'div',
+    className: 'each-crime',
+    template: _.template( $('#crimes').html() ),
+    render: function () {
+        this.$el.html( this.template( this.model.attributes ) );
+        return this;
+    },
 });

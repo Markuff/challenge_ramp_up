@@ -15,7 +15,7 @@ body {
     padding: 1% 0%; }
     body section#content .each-crime {
       box-shadow: 1px 1px 5px #aaaaaa;
-      margin: auto;
+      margin: 1.5% auto;
       padding: 1% 5%;
       width: 70%; }
       body section#content .each-crime .l-side {
