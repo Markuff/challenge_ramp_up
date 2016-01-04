@@ -15,23 +15,43 @@
         <section id="content"></section>
     </section>
     <script type="text/template" id="crimes">
-            <div class="l-side report">
-                <h4>Category: <%= category %></h4>
-                <h5>ID: <%= id %></h5>
-                <p>Date of ocurrence: <%= month %></p>
-            </div>
-            <div class="r-side report">
-                <p>To date: <%= outcome_status.date %></p>
-                <p>Crime is: <%= outcome_status.category %></p>
-            </div>
+        <div class="l-side report">
+            <h4>Category: <%= category %></h4>
+            <h5>ID: <%= id %></h5>
+            <p>Date of ocurrence: <%= month %></p>
+        </div>
+        <div class="r-side report">
+            <p>To date: <%= outcome_status.date %></p>
+            <p>Crime is: <%= outcome_status.category %></p>
+        </div>
     </script>
+    <!--
+    <script id="crimes" type="text/x-handlebars-template">
+        <div class="l-side report">
+            <h4>Category: {{ category }}</h4>
+            <h5>ID: {{ id }} </h5>
+            <p>Date of ocurrence: {{ month }} </p>
+        </div>
+        <div class="r-side report">
+            <p>To date: {{ outcome_status.date }} </p>
+            <p>Crime is: {{ outcome_status.category }} </p>
+        </div>
+    </script>
+    -->
     <script src="js/lib/jquery-1.11.3.min.js"></script>
     <script src="js/lib/underscore-min.js"></script>
     <script src="js/lib/backbone-min.js"></script>
+    <script src="js/lib/handlebars-v4.0.5.js"></script>
     <script src="js/models/crime.js"></script>
     <script src="js/collections/crimes.js"></script>
     <script src="js/views/app.js"></script>
     <script src="js/views/crimes.js"></script>
     <script src="js/app.js"></script>
+    <!--
+    <script type="text/x-javascript">
+        var source = $('#crimes').html();
+        var template = Handlebars.compile(source);
+    </script>
+    -->
 </body>
 </html>
