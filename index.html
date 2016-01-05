@@ -17,21 +17,24 @@
     
     <!-- Template related with /views/crimes.js -->
     <script id="crimes" type="text/x-handlebars-template">
-        <div class="l-side report">
+        <div class="l-side">
             <h4>Category: {{category}}</h4>
             <h5>ID: {{id}} </h5>
             <p>Date of ocurrence: {{month}} </p>
         </div>
-        <div class="r-side report">
+        <div class="r-side">
             <p>To date: {{outcome_status.date}} </p>
             <p>Crime is: {{outcome_status.category}} </p>
         </div>
     </script>
     
+    <script data-main="js/main" src="js/lib/require.js"></script>
+    <!--
     <script src="js/lib/jquery-1.11.3.min.js"></script>
     <script src="js/lib/underscore-min.js"></script>
     <script src="js/lib/backbone-min.js"></script>
     <script src="js/lib/handlebars-v4.0.5.js"></script>
+    -->
     <script src="js/models/crime.js"></script>
     <script src="js/collections/crimes.js"></script>
     <script src="js/views/app.js"></script>
