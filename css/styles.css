@@ -20,10 +20,10 @@ body {
       width: 70%; }
       body section#content .each-crime .l-side {
         float: left;
-        width: 45%; }
+        width: 49%; }
       body section#content .each-crime .r-side {
         float: right;
-        width: 45%; }
+        width: 49%; }
       body section#content .each-crime report {
         width: 100%; }
       body section#content .each-crime:after {
