@@ -1,7 +1,12 @@
 // js/app.js
 
-var app = app || {};
+define(['backbone', 'app_Vie'], function (Backbone, app_vie) {
 
-$(function () {
-    new app.AppView();
+    var app = app || {};
+
+    //$(function () {
+        //new app.AppView();
+        new app_vie();
+    //});
+
 });

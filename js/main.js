@@ -39,7 +39,7 @@ requirejs.config({
 });
 
 requirejs(
-    ['jQuery', 'underscore', 'backbone', 'handlebars', 'crime_Mod', 'crimes_Col', 'crimes_Vie', 'app_Vie', 'app_JS'], 
-    function ($, _, Backbone, handlebars, crime_mod, crimes_col, crimes_vie, app_vie, app_js) 
+    ['jQuery', 'underscore', 'backbone', 'crime_Mod', 'crimes_Col', 'crimes_Vie', 'app_Vie', 'app_JS'], 
+    function ($, _, Backbone, crime_mod, crimes_col, crimes_vie, app_vie, app_js) 
     {}
 );

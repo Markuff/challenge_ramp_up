@@ -1,7 +1,6 @@
 // js/views/crimes.js
 
-
-requirejs(['handlebars'], function () {
+define(['backbone', 'handlebars', 'crimes_Col'], function (Backbone, Handlebars, crimes_col) {
     
     var app = app || {};
 
