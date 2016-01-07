@@ -1,5 +1,8 @@
 module.exports = function (grunt) {
+    
+    // Automatization processes
     grunt.initConfig ({
+        // Compiles Sass files
         sass: {
             dist: {
                 files: {
@@ -7,6 +10,7 @@ module.exports = function (grunt) {
                 }
             }
         },
+        // Takes the compiled CSS file givin back the min version
         cssmin: {
             target: {
                 files: [{
@@ -18,6 +22,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        // Watch task, when is running compiles the Sass and then creates the min version
         watch: {
             css: {
                 files: ['css/*.scss'],
@@ -25,7 +30,7 @@ module.exports = function (grunt) {
             },
         },
     });
-        
+    
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');

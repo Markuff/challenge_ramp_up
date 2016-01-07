@@ -24,8 +24,6 @@ body {
       body section#content .each-crime .r-side {
         float: right;
         width: 49%; }
-      body section#content .each-crime report {
-        width: 100%; }
       body section#content .each-crime:after {
         clear: both;
         content: '';

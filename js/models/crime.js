@@ -2,6 +2,7 @@
 
 var app = app || {};
 
+// This is the model of the data that will be recived from the API
 app.Crime = Backbone.Model.extend ({
     defaults: {
         category: '',
