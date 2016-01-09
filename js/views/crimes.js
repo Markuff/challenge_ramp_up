@@ -1,10 +1,12 @@
 // js/views/crimes.js
 
-define(['backbone', 'handlebars', 'crimes_Col'], function (Backbone, Handlebars, crimes_col) {
+//define(['backbone', 'handlebars', 'crimes_Col'], function (Backbone, Handlebars, crimes_col) {
+define(['backbone', 'handlebars'], function (Backbone, Handlebars) {
     
-    var app = app || {};
+    //var app = app || {};
 
-    app.CrimeView = Backbone.View.extend ({
+    //app.CrimeView = Backbone.View.extend ({
+    var CrimeView = Backbone.View.extend ({
         tagName: 'div',
         className: 'each-crime',
         template: Handlebars.compile($('#crimes').html()),
@@ -13,5 +15,7 @@ define(['backbone', 'handlebars', 'crimes_Col'], function (Backbone, Handlebars,
             return this;
         },
     });
+    
+    return CrimeView;
     
 });

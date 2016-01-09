@@ -2,9 +2,10 @@
 
 define(['backbone'], function (Backbone) {
 
-var app = app || {};
+//var app = app || {};
 
-    app.Crime = Backbone.Model.extend ({
+    //app.Crime = Backbone.Model.extend ({
+    var CrimeModel = Backbone.Model.extend ({
         defaults: {
             category: '',
             outcome_status: {
@@ -15,5 +16,7 @@ var app = app || {};
             month: ''
         }
     });
+    
+    return CrimeModel;
 
 });

@@ -1,8 +1,9 @@
 // js/app.js
 
+//define(['backbone', 'app_Vie'], function (Backbone, app_vie) {
 define(['backbone', 'app_Vie'], function (Backbone, app_vie) {
 
-    var app = app || {};
+    //var app = app || {};
 
     //$(function () {
         //new app.AppView();

@@ -2,25 +2,30 @@
 
 // All other files named here, are relative in postion to this file.
 
-requirejs.config({
+require.config({
     baseUrl: 'js',
     paths: {
         jQuery: 'lib/jquery-1.11.3.min',
         underscore: 'lib/underscore-min',
         backbone: 'lib/backbone-min',
         handlebars: 'lib/handlebars-v4.0.5',
-        crime_Mod: 'models/crime',
-        crimes_Col: 'collections/crimes',
-        crimes_Vie: 'views/crimes',
-        app_Vie: 'views/app',
-        app_JS: 'app'
+        //CrimeModel: 'models/crime',
+        /*
+        crimesCol: 'collections/crimes',
+        crimesVie: 'views/crimes',
+        appVie: 'views/app',
+        appJS: 'app'
+        */
     },
     shim: {
+        'jQuery': {
+            exports: '$'
+        },
         'backbone': {
-            deps: ['underscore', 'jquery'],
+            deps: ['underscore', 'jQuery'],
             exports: 'Backbone'
         },
-        'crime_Mod': {
+        /*'crime_Mod': {
             exports: 'crime_mod'
         },
         'crimes_Col': {
@@ -34,12 +39,14 @@ requirejs.config({
         },
         'app_JS': {
             exports: 'app_js'
-        }
+        }*/
     }
 });
 
-requirejs(
-    ['jQuery', 'underscore', 'backbone', 'crime_Mod', 'crimes_Col', 'crimes_Vie', 'app_Vie', 'app_JS'], 
-    function ($, _, Backbone, crime_mod, crimes_col, crimes_vie, app_vie, app_js) 
-    {}
+require(
+    ['views/app'], 
+    function (AppView) 
+    {
+        new AppView();
+    }
 );
