@@ -1,12 +1,14 @@
 // js/collections/crimes.js
 
-var app = app || {};
+define(['backbone','models/crime'], function (Backbone, CrimeModel) {
+    
+    // This collection will handle the models
+    var CrimesSet = Backbone.Collection.extend ({
+        model: CrimeModel,
+        url: 'https://data.police.uk/api/crimes-no-location?category=all-crime&force=warwickshire&date=2013-09'
+    });
+    
+    // Instanciates "CrimesSet" object
+    return new CrimesSet();
 
-// This collection will handle the models
-var CrimesSet = Backbone.Collection.extend ({
-    model: app.Crime,
-    url: 'https://data.police.uk/api/crimes-no-location?category=all-crime&force=warwickshire&date=2013-09'
 });
-
-// Instanciates "CrimesSet"
-app.Crimes = new CrimesSet ();
