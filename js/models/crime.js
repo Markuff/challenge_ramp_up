@@ -1,10 +1,7 @@
 // js/models/crime.js
 
 define(['backbone'], function (Backbone) {
-
-//var app = app || {};
-
-    //app.Crime = Backbone.Model.extend ({
+    
     var CrimeModel = Backbone.Model.extend ({
         defaults: {
             category: '',
