@@ -6,6 +6,7 @@ define(['backbone', 'jQuery', 'collections/crimes', 'views/crimes'], function (B
         // DOM reference element, allows later rendering
         el:'#applic',
         initialize: function () {
+            $('#dateSelectors').change(function (e) {console.log(this.value); var tmp = this.value; var tmp2 = tmp.slice(0,7); console.log(tmp2);  });
             // First listen to assincronical call to the API
             this.listenTo(CrimesSet, 'update', this.fill);
             // Once it has listened the fetch method brings in the data

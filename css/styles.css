@@ -10,6 +10,12 @@ body {
     margin: 0px;
     padding: 1% 0%;
     text-align: center; }
+  body section#selectors {
+    background: #ccc;
+    margin: 1% auto;
+    padding: 5%;
+    text-align: center;
+    width: 65%; }
   body section#content {
     margin: 1% 0%;
     padding: 1% 0%; }

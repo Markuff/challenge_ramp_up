@@ -19,6 +19,8 @@ require.config({
     }
 });
 
-require(['views/app'], function (AppView) {
+require(['jQuery','views/app'], function ($, AppView) {
+    //var dateSelectors = $('#dateSelectors').val();
+    //var dateSelected = dateSelectors.slice(0,7);
     new AppView();
 });

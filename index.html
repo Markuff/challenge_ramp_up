@@ -15,6 +15,18 @@
             <h2>Police API Documentation</h2>
             <h3>Crimes with no location</h3>
         </header>
+        <section id="selectors">
+            <label for="date">Select a date</label>
+            <input type="date" id="dateSelectors">
+            <!--<hr />
+            <label for="">Select something</label>
+            <select name="" id="">
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>-->
+        </section>
         <section id="content"></section><!-- To be filled with the content from the API -->
     </section>
     
@@ -22,12 +34,23 @@
     <script id="crimes" type="text/x-handlebars-template">
         <div class="l-side">
             <h4>Category: {{category}}</h4>
+            <h4>Location Type: {{location_type}}</h4>
             <h5>ID: {{id}} </h5>
-            <p>Date of ocurrence: {{month}} </p>
+            <p>Context: {{context}}</p>
+            <p>Month: {{month}} </p>
+            <!--<hr />
+            <h6>Outcome Status</h6>
+            <p>Category: {{outcome_status.category}}</p>
+            <p>Date: {{outcome_status.date}}</p>-->
         </div>
         <div class="r-side">
-            <p>To date: {{outcome_status.date}} </p>
-            <p>Crime is: {{outcome_status.category}} </p>
+            <h6>Location</h6>
+            <p>Latitude: {{location.latitude}} </p>
+            <p>Longitude: {{location.longitude}} </p>
+            <hr />
+            <h6>Street</h6>
+            <p>ID: {{location.street.id}}</p>
+            <p>Name: {{location.street.name}}</p>
         </div>
     </script>
     
