@@ -5,7 +5,7 @@
     <meta name="description" content="To be filled....">
     <meta name="author" content="Me">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Data Police UK | API Documentation | Crimes with no location</title>
+    <title>Data Police UK | API Documentation</title>
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
@@ -13,20 +13,8 @@
         <header id="header">
             <h1>Data Police UK</h1>
             <h2>Police API Documentation</h2>
-            <h3>Crimes with no location</h3>
         </header>
-        <section id="selectors">
-            <label for="date">Select a date: </label>
-            <input type="date" id="dateSelectors" min="2010-12-01" max="2015-12-31">
-            <!--<hr />
-            <label for="">Select something</label>
-            <select name="" id="">
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>-->
-        </section>
+        <section id="selectors"></section>
         <section id="content"></section><!-- To be filled with the content from the API -->
     </section>
     
@@ -38,12 +26,12 @@
             <h5>ID: {{id}} </h5>
             <p>Context: {{context}}</p>
             <p>Month: {{month}} </p>
-            <!--<hr />
-            <h6>Outcome Status</h6>
-            <p>Category: {{outcome_status.category}}</p>
-            <p>Date: {{outcome_status.date}}</p>-->
         </div>
         <div class="r-side">
+            <h6>Outcome Status</h6>
+            <p>Category: {{outcome_status.category}}</p>
+            <p>Date: {{outcome_status.date}}</p>
+            <hr />
             <h6>Location</h6>
             <p>Latitude: {{location.latitude}} </p>
             <p>Longitude: {{location.longitude}} </p>
@@ -52,6 +40,17 @@
             <p>ID: {{location.street.id}}</p>
             <p>Name: {{location.street.name}}</p>
         </div>
+    </script>
+    
+    <script id="selects" type="text/x-handlebars-template">
+        <label for="date">Select a date: </label>
+        <input type="date" id="dateSelectors" min="2010-12-01" max="2015-12-31">
+        <label for="categ">Select category: </label>
+        <select name="categOptions" id="categ">
+            {{#each arrayCats}}
+            <option value="{{this.attributes.url}}">{{this.attributes.name}}</option>
+            {{/each}}
+        </select>
     </script>
     
     <script data-main="js/main" src="js/lib/require.js"></script>

@@ -1,0 +1,10 @@
+
+
+        <label for="date">Select a date: </label>
+        <input type="date" id="dateSelectors" min="2010-12-01" max="2015-12-31">
+        <label for="categ">Select category: </label>
+        <select name="categOptions" id="categ">
+            {{#each arrayCats}}
+            <option value="{{this.attributes.url}}">{{this.attributes.name}}</option>
+            {{/each}}
+        </select>
